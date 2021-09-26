@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\main\sheets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <link rel="icon" href=".\main\logo.ico">
+    <title>Weatherly</title>
+</head>
+<body>
+
+    <!-- <div id="overlay" onclick="off()">
+        <div class="overlaydiv">
+            <form action="login" class="login">
+                <input type="email" placeholder="Email-ID" class="iplogin">
+                <br>
+                <input type="password" placeholder="Password" class="iplogin">
+            </form>
+        </div>
+    </div> -->
+    <img src=".\main\background.png" class="background" alt="">
+    
+    <header>
+        <div class='head-div'>
+            <img  class='logo' src="./main/logo.png"  alt="">
+            <p class='logoname'>Weatherly</p>
+            <img src="./main/user.png" align="right" class="userlogo" onclick="on()" >
+        </div>
+    </header>
+    
+    <main>
+        <p>&nbsp;</p>
+        <br><br>
+        <img src="./main/cloud.png" align="right" alt="">
+        <br><br>
+        <img src="./main/cloud.png" alt="">
+
+        <div class="input">
+        <form action="location-input">
+            <input class="textinp" type="text" placeholder="  Enter Location...">
+            <br>
+            <br>
+            <input type="submit" class="submit" value="Find weather">
+        </form>
+    </div>
+       
+    </main>
+
+    <!-- <footer>
+        <div class="footer">
+            <p class="made">Made with ❤</span><br>by Dhruv, Kushagra and Prashant</p>
+            <ol type="i">
+                Made using:
+                 <li>HTML</li>
+                 <li>CSS</li>
+                 <li>JavaScript</li>
+            </ol>
+           
+        </div>
+    </footer> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+		var $winwidth = $(window).width();
+		$(".background").attr({
+			width: $winwidth
+		});
+		$(window).bind("resize", function(){ 
+			var $winwidth = $(window).width();
+			$(".background").attr({
+				width: $winwidth
+			});
+		 });
+	}); 
+    
+function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+</body>
+</html>
