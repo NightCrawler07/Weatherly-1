@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\main\sheets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <link rel="icon" href=".\main\logo.ico">
+    <title>Weatherly</title>
+</head>
+<body>
+
+
+    <!-- <img src=".\main\background.png" class="background" alt=""> -->
+    <div class="overlay" id="ov">
+        <h1> Weatherly App</h1>
+    </div>
+    
+    <header>
+        <div class='head-div'>
+            <img  class='logo' src="./main/logo.png"  alt="">
+            <p class='logoname'>Weatherly</p>
+            <img src="./main/user.png" align="right" class="userlogo" onclick="on()" >
+        </div>
+    </header>
+    
+    <main>
+        <div class='cont' align='center'>
+        <div class="input">
+        <!-- <form action="location-input"> -->
+            <input class="textinp" type="text" placeholder="  Enter Location...">
+            <br>
+            <br>
+            <button class="submit" onclick="exe()">Find Weather</button>
+        <!-- </form> -->
+        <section class="location">
+            
+            <div class="city">Delhi, IN</div>
+            <div class="date">Tuesday 28 September 2021</div>
+          </section>
+          <div class="current">
+            <div class="temp">29<span>°c</span></div>
+            <div class="weather">Sunny</div>
+            <div class="hi-low">29°c / 29°c</div>
+          </div>
+        </div>
+    </div>
+       
+    </main>
+
+    <!-- <footer>
+        <div class="footer">
+            <p class="made">Made with ❤</span><br>by Dhruv, Kushagra and Prashant</p>
+            <ol type="i">
+                Made using:
+                 <li>HTML</li>
+                 <li>CSS</li>
+                 <li>JavaScript</li>
+            </ol>
+           
+        </div>
+    </footer> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+		var $winwidth = $(window).width();
+		$(".background").attr({
+			width: $winwidth
+		});
+		$(window).bind("resize", function(){ 
+			var $winwidth = $(window).width();
+			$(".background").attr({
+				width: $winwidth
+			});
+		 });
+	}); 
+    
+function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+<script>
+      let spinnerWrapper =document.getElementById("ov");
+
+window.addEventListener('load', function () {
+    
+    setTimeout(function(){ spinnerWrapper.style.display = 'none';}, 2000);
+    
+});
+</script>
+<script>
+   const api = {
+      key: "cd3c097765ba92903ec783b6cf5bef86",
+      base: "https://api.openweathermap.org/data/2.5/"
+    }
+    
+    const searchbox = document.querySelector('.textinp');
+    searchbox.addEventListener('keypress', setQuery);
+    document.querySelector('.submit').addEventListener('onclick',setQuery);
+    function exe(){
+      getResults(searchbox.value);
+    }
+    
+    function setQuery(evt) {
+      if (evt.keyCode == 13) {
+        getResults(searchbox.value);
+      }
+    }
+    
+    function getResults (query) {
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+        .then(weather => {
+          return weather.json();
+        }).then(displayResults);
+    }
+    
+    function displayResults (weather) {
+      let city = document.querySelector('.location .city');
+      city.innerText = `${weather.name}, ${weather.sys.country}`;
+    
+      let now = new Date();
+      let date = document.querySelector('.location .date');
+      date.innerText = dateBuilder(now);
+    
+      let temp = document.querySelector('.current .temp');
+      temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+    
+      let weather_el = document.querySelector('.current .weather');
+      weather_el.innerText = weather.weather[0].main;
+    
+      let hilow = document.querySelector('.hi-low');
+      hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+    }
+    
+    function dateBuilder (d) {
+      let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+      let day = days[d.getDay()];
+      let date = d.getDate();
+      let month = months[d.getMonth()];
+      let year = d.getFullYear();
+    
+      return `${day} ${date} ${month} ${year}`;
+    }
+</script>
+</body>
+</html>
+
