@@ -25,7 +25,11 @@
             <div class="head-div">
                 <img class="logo" src="assets/logo.png" alt="" />
                 <p class="logoname">Weatherly</p>
-                <img src="assets/user.png" align="right" class="userlogo" onclick="on()" />
+                <ul class="navh">
+                <li>HOME</li>
+                <li>WEATHER MAP</li>
+                <li>ABOUT PROJECT</li>
+                </ul>
             </div>
         </header>
 
@@ -34,9 +38,9 @@
                 <div class="input">
                     <!-- <form action="location-input"> -->
                     <input class="textinp" type="text" placeholder="  Enter Location..." />
-                    <br />
-                    <br />
-                    <button class="submit" onclick="exe()">Find Weather</button>
+                    <button class="submit" onclick="exe()"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="Black" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></button></input>
                     <!-- </form> -->
                     <section class="location">
                         <div class="city">Delhi, IN</div>
