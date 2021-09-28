@@ -95,34 +95,6 @@ li {
     padding-left: 15px;
 }
 
-.textinp {
-    height: 8%;
-    width: 50%;
-    opacity: 30%;
-    border-radius: 50px;
-    font-size: 2rem;
-    font-family: "Lato", sans-serif;
-    border-color: black;
-    padding-left: 20px;
-}
-
-.submit {
-    border-radius: 50px;
-    font-size: 1.5rem;
-    font-family: "Lato", sans-serif;
-    border: none;
-}
-
-.textinp:hover,
-.textinp::selection,
-.textinp:focus,
-.submit:hover,
-.submit::selection,
-.submit:focus {
-    opacity: 80%;
-    outline: none;
-}
-
 .mainbg {
     width: 100%;
     position: absolute;
@@ -135,56 +107,6 @@ li {
     margin-right: 10px;
 }
 
-.input {
-    margin-top: 10%;
-    /* margin-left:35% ; */
-    align-items: center;
-}
-
-.location .city {
-    color: rgb(24, 23, 23);
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    margin-top: 40px;
-    font-family: "Lato", sans-serif;
-}
-
-.location .date {
-    color: rgb(26, 24, 24);
-    font-size: 16px;
-    font-family: "Lato", sans-serif;
-}
-
-.current .temp {
-    color: rgb(19, 18, 18);
-    font-size: 102px;
-    font-weight: 900;
-    margin: 30px 0px;
-    font-family: "Lato", sans-serif;
-}
-
-.current .temp span {
-    font-weight: 500;
-    font-family: "Lato", sans-serif;
-}
-
-.current .weather {
-    color: rgb(31, 28, 28);
-    font-size: 32px;
-    font-weight: 700;
-    font-style: italic;
-    margin-bottom: 15px;
-    font-family: "Lato", sans-serif;
-}
-
-.current .hi-low {
-    color: rgb(36, 32, 32);
-    font-size: 24px;
-    font-weight: 500;
-    font-family: "Lato", sans-serif;
-    margin-bottom: 92.1px;
-}
 .footer {
     background-color: rgb(32, 17, 0);
     color: azure;
@@ -197,32 +119,6 @@ li {
 
 .monospace-text {
     font-family: JetBrains Mono, monospace;
-}
-
-.working-code {
-    font-family: JetBrains Mono, monospace;
-    width: min-content;
-    text-align: left;
-}
-
-.working-cont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    font-family: "Lato", sans-serif;
-
-    padding: 20px 10% 20px 10%;
-}
-
-.about-cont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    font-family: "Lato", sans-serif;
-
-    padding: 20px 10% 20px 10%;
 }
 
 /* .cont{

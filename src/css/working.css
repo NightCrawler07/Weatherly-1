@@ -1,0 +1,17 @@
+@import "common.css";
+
+.working-code {
+    font-family: JetBrains Mono, monospace;
+    width: min-content;
+    text-align: left;
+}
+
+.working-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    font-family: "Lato", sans-serif;
+
+    padding: 20px 10% 20px 10%;
+}
