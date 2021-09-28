@@ -178,6 +178,36 @@
     font-family: "Lato", sans-serif;
 }
 
+.monospace-text {
+    font-family: JetBrains Mono, monospace;
+}
+
+.working-code {
+    font-family: JetBrains Mono, monospace;
+    width: min-content;
+    text-align: left;
+}
+
+.working-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    font-family: "Lato", sans-serif;
+
+    padding: 20px 10% 20px 10%;
+}
+
+.about-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    font-family: "Lato", sans-serif;
+
+    padding: 20px 10% 20px 10%;
+}
+
 /* .cont{
     text-align: center;
     background-color:rgba(16, 105, 133, 0.712);
