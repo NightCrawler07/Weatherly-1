@@ -1,5 +1,6 @@
 * {
     margin: 0px;
+    /* background-image: -moz-linear-gradient(to bottom,#02c39a ,#F0F3BD); */
 }
 
 /* body{
@@ -28,13 +29,22 @@
     }
 }
 
-ul {
+@keyframes zoomIn1 {
+	0% {
+		transform: scale(0.5, 0.5);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+/* ul {
     list-style-type: none;
     padding-left: 45vw;
     padding-top: 15px;
-}
+} */
 
-li {
+/* li {
     padding: 20px;
     margin-left: 20px;
     color: white;
@@ -42,7 +52,7 @@ li {
     background-color: black;
     border-radius: 40px;
     cursor: pointer;
-}
+} */
 
 .navh {
     display: flex;
@@ -69,6 +79,7 @@ li {
 
 .head-div {
     display: flex;
+    justify-content: space-between;
     height: 8%;
     vertical-align: middle;
     width: 100%;
@@ -108,10 +119,12 @@ li {
 }
 
 .footer {
-    background-color: rgb(32, 17, 0);
-    color: azure;
-
+    background-color: #05668D;
+    color: #F0F3BD;
+    position:absolute;
     margin-bottom: 0px;
+    bottom:0;
+    z-index: 2;
     width: 100%;
     text-align: center;
     font-family: "Lato", sans-serif;
@@ -153,3 +166,25 @@ li {
     opacity: 70%;
     border-radius: 25px;
   } */
+ @media screen and (max-width: 664px) {
+	.textinp {
+		font-size: 1.2rem;
+	}
+
+}
+@media screen and (max-width: 345px) {
+	.head {
+		height: 50px;
+		font-size: 12rem;
+		padding-left: 0;
+	}
+	.logoname {
+		vertical-align: 4mm;
+	}
+	.textinp {
+		font-size: .75rem;
+	}
+	.submit {
+		font-size: .75rem;
+	}
+}
