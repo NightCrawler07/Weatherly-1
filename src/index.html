@@ -178,5 +178,16 @@
                 return `${day} ${date} ${month} ${year}`;
             }
         </script>
+        <script>
+                function onk() {
+                        document.getElementsByClassName("overlayLister")[0].style.display = "block";
+                        document.getElementById("hamburger").setAttribute(onclick,offk());
+                            }
+  
+                function offk() {
+                    document.getElementsByClassName("overlayLister")[0].style.display = "none";
+                    document.getElementById("hamburger").setAttribute(onclick,onk());
+                            }
+        </script>
     </body>
 </html>
