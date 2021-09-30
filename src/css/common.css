@@ -30,12 +30,12 @@
 }
 
 @keyframes zoomIn1 {
-	0% {
-		transform: scale(0.5, 0.5);
-	}
-	100% {
-		transform: scale(1, 1);
-	}
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 /* ul {
@@ -119,11 +119,11 @@
 }
 
 .footer {
-    background-color: #05668D;
-    color: #F0F3BD;
-    position:absolute;
+    background-color: #05668d;
+    color: #f0f3bd;
+    position: absolute;
     margin-bottom: 0px;
-    bottom:0;
+    bottom: 0;
     z-index: 2;
     width: 100%;
     text-align: center;
@@ -166,25 +166,25 @@
     opacity: 70%;
     border-radius: 25px;
   } */
- @media screen and (max-width: 664px) {
-	.textinp {
-		font-size: 1.2rem;
-	}
-
+@media screen and (max-width: 664px) {
+    .textinp {
+        font-size: 1.2rem;
+    }
 }
+
 @media screen and (max-width: 345px) {
-	.head {
-		height: 50px;
-		font-size: 12rem;
-		padding-left: 0;
-	}
-	.logoname {
-		vertical-align: 4mm;
-	}
-	.textinp {
-		font-size: .75rem;
-	}
-	.submit {
-		font-size: .75rem;
-	}
+    .head {
+        height: 50px;
+        font-size: 12rem;
+        padding-left: 0;
+    }
+    .logoname {
+        vertical-align: 4mm;
+    }
+    .textinp {
+        font-size: 0.75rem;
+    }
+    .submit {
+        font-size: 0.75rem;
+    }
 }

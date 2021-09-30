@@ -22,9 +22,9 @@
         </div>
 
         <div class="overlayLister">
-            <img src="assets/x.png" onclick="offk()" id="cross" alt="">
+            <img src="assets/x.png" onclick="offk()" id="cross" alt="" />
             <div class="overlayLister2">
-                <ul id="text" >
+                <ul id="text">
                     <li><h1>Home</h1></li>
                     <li><h1>Weather App</h1></li>
                     <li><h1>About Project</h1></li>
@@ -43,7 +43,15 @@
                     <li>WEATHER MAP</li>
                     <li>ABOUT PROJECT</li>
                 </ul> -->
-                <div><img src="assets/hamburger.png" align="right" class="hamburgerlogo head" id="hamburger" onclick="onk()" ></div>
+                <div>
+                    <img
+                        src="assets/hamburger.png"
+                        align="right"
+                        class="hamburgerlogo head"
+                        id="hamburger"
+                        onclick="onk()"
+                    />
+                </div>
             </div>
         </header>
 
@@ -193,14 +201,13 @@
             }
         </script>
         <script>
-                function onk() {
-                        document.getElementsByClassName("overlayLister")[0].style.display = "block";
-                            }
-  
-                function offk() {
-                        document.getElementsByClassName("overlayLister")[0].style.display = "none";
-                            }
+            function onk() {
+                document.getElementsByClassName("overlayLister")[0].style.display = "block";
+            }
+
+            function offk() {
+                document.getElementsByClassName("overlayLister")[0].style.display = "none";
+            }
         </script>
     </body>
 </html>
-
