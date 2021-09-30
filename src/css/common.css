@@ -118,7 +118,7 @@
 .footer {
     background-color: var(--orange);
     color: var(--background);
-    position: absolute;
+    position: fixed;
     margin-bottom: 0px;
     bottom: 0;
     z-index: 2;
