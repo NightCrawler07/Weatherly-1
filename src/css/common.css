@@ -10,6 +10,20 @@
     background-repeat: no-repeat;   
 } */
 
+:root {
+    --background: #FFFFFF;
+    --text: #040404;
+    
+    --red: #EC4E20;
+    --orange: #FF9505;
+    --yellowish-orange: #F7CB15;
+    --yellow: #FBFF12;
+
+    --bright-blue: #3777FF;
+    --blue: #266DD3;
+    --dark-blue: #016FB9;
+}
+
 .background {
     height: 100%;
     position: absolute;
@@ -69,7 +83,7 @@
 
 .overlay h1 {
     text-align: center;
-    color: #bbc2cc;
+    color: var(--background);
     font-size: 7em;
     margin-top: 20%;
     font-family: "Helvetica";
@@ -119,8 +133,8 @@
 }
 
 .footer {
-    background-color: #05668d;
-    color: #f0f3bd;
+    background-color: var(--orange);
+    color: var(--background);
     position: absolute;
     margin-bottom: 0px;
     bottom: 0;

@@ -7,9 +7,9 @@
     border-radius: 50px;
     font-size: 2rem;
     font-family: "Lato", sans-serif;
-    border-color: #028090;
+    border-color: var(--bright-blue);
     padding-left: 20px;
-    color: #028090;
+    color: var(--text);
 }
 
 .submit {
@@ -36,22 +36,22 @@
 }
 
 .location .city {
-    color: #028090;
-    font-size: 32px;
+    color: var(--blue);
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 45px;
     font-family: "Lato", sans-serif;
 }
 
 .location .date {
-    color: #028090;
-    font-size: 16px;
+    color: var(--bright-blue);
+    font-size: 23px;
     font-family: "Lato", sans-serif;
 }
 
 .current .temp {
-    color: #028090;
+    color: var(--text);
     font-size: 102px;
     font-weight: 900;
     margin: 30px 0px;
@@ -64,8 +64,8 @@
 }
 
 .current .weather {
-    color: #028090;
-    font-size: 32px;
+    color: var(--blue);
+    font-size: 35px;
     font-weight: 700;
     font-style: italic;
     margin-bottom: 15px;
@@ -73,8 +73,8 @@
 }
 
 .current .hi-low {
-    color: #028090;
-    font-size: 24px;
+    color: var(--bright-blue);
+    font-size: 26px;
     font-weight: 500;
     font-family: "Lato", sans-serif;
     margin-bottom: 92.1px;
@@ -105,12 +105,14 @@
     animation: zoomIn1 1s ease;
 }
 .overlayLister2 {
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     position: absolute;
-    top: 20%;
-    left: 20%;
-    background-color: #00a896;
+    top: 30%;
+    left: 30%;
+    opacity: 50%;
+    background-color: var(--background);
+    border: 2px solid var(--orange);
     text-align: justify;
     cursor: pointer;
     border-radius: 25px;
@@ -119,10 +121,10 @@
 #text {
     position: absolute;
     top: 50%;
-    left: 50%;
-    font-size: 1.5rem;
+    left: 40%;
+    font-size: 1.1rem;
     font-family: "lato", sans-serif;
-    color: #f0f3bd;
+    color: var(--text);
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
