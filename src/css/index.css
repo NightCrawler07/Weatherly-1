@@ -7,7 +7,7 @@
     border-radius: 50px;
     font-size: 2rem;
     font-family: "Lato", sans-serif;
-    border-color: var(--bright-blue);
+    border-color: var(--orange);
     padding-left: 20px;
     color: var(--text);
 }
@@ -81,10 +81,11 @@
 }
 
 .hamburgerlogo {
-    height: 65px;
+    height: 35px;
     display: inline;
-    margin-top: 5px;
-    margin-right: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    z-index: 0;
 }
 
 #cross {
@@ -109,11 +110,11 @@
     animation: zoomIn1 1s ease;
 }
 .overlayLister2 {
-    width: 40%;
-    height: 20%;
+    width: 60%;
+    height: 60%;
     position: absolute;
-    top: 40%;
-    left: 30%;
+    top: 20%;
+    left: 20%;
     opacity: 92%;
     background-color: var(--background);
     border: 2px solid var(--orange);
@@ -129,9 +130,9 @@
 
 #text {
     position: absolute;
-    top: 50%;
-    left: 35%;
-    font-size: 0.95rem;
+    top: 40%;
+    left: 40%;
+    font-size: 1.5rem;
     font-family: "lato", sans-serif;
     color: var(--text);
     transform: translate(-50%, -50%);
