@@ -69,7 +69,7 @@
         </header>
 
         <main class="working-cont">
-            <p class="textinp">
+            <p class="textinp opacity-hack">
                 The Weatherly app is built on the API provided by
                 <span class="monospace-text">openweathermap</span>.
             </p>
@@ -85,7 +85,7 @@ const api = {
                 </pre>
             </div>
 
-            <p class="textinp">
+            <p class="textinp opacity-hack">
                 It uses the key to asynchronously call the API, accepting the result as a
                 <span class="monospace-text">JSON</span> object. Then, it calls the
                 <span class="monospace-text">displayResults</span> function to show the details in the page.
@@ -100,6 +100,36 @@ function getResults(query) {
             return weather.json();
         })
         .then(displayResults);
+}
+                    </code>
+                </pre>
+            </div>
+
+            <p class="textinp opacity-hack">
+                The <span class="monospace-text">displayResults</span> function queries the document to get the DOM
+                elements whose values are to be modified. Then, it extracts the values from the JSON returned by the API
+                and stores the results.
+            </p>
+
+            <div>
+                <pre class="working-code">
+                    <code class="language-js">
+function displayResults(weather) {
+    let city = document.querySelector(".location .city");
+    city.innerText = `${weather.name}, ${weather.sys.country}`;
+
+    let now = new Date();
+    let date = document.querySelector(".location .date");
+    date.innerText = dateBuilder(now);
+
+    let temp = document.querySelector(".current .temp");
+    temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+
+    let weather_el = document.querySelector(".current .weather");
+    weather_el.innerText = weather.weather[0].main;
+
+    let hilow = document.querySelector(".hi-low");
+    hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
                     </code>
                 </pre>

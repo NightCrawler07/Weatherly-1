@@ -14,12 +14,10 @@
 
     font-family: "Lato", sans-serif;
 
-    /* padding: 20px 10% 20px 10%; */
-
     width: 80%;
     height: 80%;
 
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 10%;
 }
 
@@ -29,6 +27,11 @@
 
 .working-cont pre {
     width: 100%;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 664px) {
