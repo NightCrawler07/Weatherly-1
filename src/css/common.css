@@ -177,6 +177,10 @@
     opacity: 0%;
 }
 
+.opacity-hack {
+    opacity: 60%;
+}
+
 #cross {
     position: absolute;
     top: 10%;
