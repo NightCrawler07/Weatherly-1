@@ -181,6 +181,10 @@
     opacity: 60%;
 }
 
+.logo-button a {
+    text-decoration: none;
+}
+
 #cross {
     position: absolute;
     top: 10%;
