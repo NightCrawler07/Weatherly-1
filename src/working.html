@@ -18,7 +18,7 @@
 
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css"
+            href=" https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/atom-one-light.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
         <script>
@@ -30,40 +30,70 @@
 
     <body>
         <header>
+            <div class="overlayLister">
+                <button class="hamburgerlogo head jugaad-button" onclick="onk()">asdf</button>
+                <!-- <img src="assets/x.png" onclick="offk()" id="cross" alt="" /> -->
+                <div class="overlayLister2">
+                    <ul id="text">
+                        <li>
+                            <h1><a href="index.html">Home</a></h1>
+                        </li>
+                        <li>
+                            <h1><a href="index.html">Weather App</a></h1>
+                        </li>
+                        <li>
+                            <h1><a href="about.html">About Project</a></h1>
+                        </li>
+                        <li>
+                            <h1><a href="working.html">How it works</a></h1>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="head-div">
-                <img class="logo" src="assets/logo.png" alt="" />
-                <p class="logoname">Weatherly</p>
-                <ul class="navh">
-                    <li>HOME</li>
-                    <li>WEATHER MAP</li>
-                    <li>ABOUT PROJECT</li>
-                </ul>
+                <div>
+                    <img class="logo" src="assets/logo.png" alt="" />
+                    <p class="logoname">Weatherly</p>
+                </div>
+                <div>
+                    <img
+                        src="assets/hamburger.png"
+                        align="right"
+                        class="hamburgerlogo head"
+                        id="hamburger"
+                        onclick="onk()"
+                    />
+                </div>
             </div>
         </header>
 
         <main class="working-cont">
-            <p>
+            <p class="textinp">
                 The Weatherly app is built on the API provided by
                 <span class="monospace-text">openweathermap</span>.
             </p>
 
-            <pre>
-                <code class="working-code language-js">
+            <div>
+                <pre class="working-code">
+                    <code class="language-js">
 const api = {
     key: "&lt;key&gt;",
     base: "https://api.openweathermap.org/data/2.5/",
 };
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </div>
 
-            <p>
+            <p class="textinp">
                 It uses the key to asynchronously call the API, accepting the result as a
                 <span class="monospace-text">JSON</span> object. Then, it calls the
                 <span class="monospace-text">displayResults</span> function to show the details in the page.
             </p>
 
-            <pre>
-                <code class="language-js working-code">
+            <div>
+                <pre class="working-code">
+                    <code class="language-js">
 function getResults(query) {
     fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((weather) => {
@@ -71,8 +101,9 @@ function getResults(query) {
         })
         .then(displayResults);
 }
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </div>
         </main>
 
         <footer>
@@ -80,5 +111,7 @@ function getResults(query) {
                 <p class="made">Made with ❤ by Dhruv, Kushagra and Prashant</p>
             </div>
         </footer>
+
+        <script src="js/hamburger.js"></script>
     </body>
 </html>
