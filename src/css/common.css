@@ -65,10 +65,12 @@
 }
 
 .overlay h1 {
+    position:absolute;
     text-align: center;
     color: var(--background);
     font-size: 7rem;
-    margin-top: 20%;
+    top: 30%;
+    left:18%;
     font-family: "Helvetica";
     letter-spacing: 4px;
     animation: zoomIn 3s ease infinite;
@@ -161,10 +163,9 @@
     opacity: 92%;
     background-color: var(--background);
     border: 2px solid var(--orange);
-    text-align: justify;
+    text-align: left;
     cursor: pointer;
     border-radius: 25px;
-
     -webkit-animation: fadeInFromNone 1s ease;
     -moz-animation: fadeInFromNone 1s ease;
     -o-animation: fadeInFromNone 1s ease;
@@ -202,7 +203,6 @@
     color: var(--text);
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-
     list-style-type: none;
 }
 
@@ -219,9 +219,12 @@ li > h1 {
     padding-bottom: 20px;
 }
 
-/* a:visited {
-    color: var(--dark-blue);
-} */
+
+@media screen and (max-width: 995px) {
+    #text{
+        font-size:1rem;
+    }
+}
 
 @media screen and (max-width: 664px) {
     .textinp {
