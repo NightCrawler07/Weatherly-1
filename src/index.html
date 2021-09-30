@@ -26,9 +26,18 @@
             <!-- <img src="assets/x.png" onclick="offk()" id="cross" alt="" /> -->
             <div class="overlayLister2">
                 <ul id="text">
-                    <li><h1>Home</h1></li>
-                    <li><h1>Weather App</h1></li>
-                    <li><h1>About Project</h1></li>
+                    <li>
+                        <h1><a href="index.html">Home</a></h1>
+                    </li>
+                    <li>
+                        <h1><a href="index.html">Weather App</a></h1>
+                    </li>
+                    <li>
+                        <h1><a href="about.html">About Project</a></h1>
+                    </li>
+                    <li>
+                        <h1><a href="working.html">How it works</a></h1>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,11 +48,7 @@
                     <img class="logo" src="assets/logo.png" alt="" />
                     <p class="logoname">Weatherly</p>
                 </div>
-                <!-- <ul class="navh">
-                    <li>HOME</li>
-                    <li>WEATHER MAP</li>
-                    <li>ABOUT PROJECT</li>
-                </ul> -->
+
                 <div>
                     <img
                         src="assets/hamburger.png"
@@ -60,7 +65,7 @@
             <div class="cont" align="center">
                 <div class="input">
                     <!-- <form action="location-input"> -->
-                    <input class="textinp" type="text" placeholder="  Enter Location..." />
+                    <input class="textinp textinp-width" type="text" placeholder="  Enter Location..." />
                     <button class="submit" onclick="exe()">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -201,21 +206,6 @@
                 return `${day} ${date} ${month} ${year}`;
             }
         </script>
-        <script>
-            function onk() {
-                if (isonk) {
-                    document.getElementsByClassName("overlayLister")[0].style.display = "block";
-                    document.getElementById("hamburger").src = "assets/x.png";
-                } else {
-                    document.getElementsByClassName("overlayLister")[0].style.display = "none";
-                    document.getElementById("hamburger").src = "assets/hamburger.png";
-                }
-                isonk = !isonk;
-            }
-
-            var isonk = true;
-
-            function offk() {}
-        </script>
+        <script src="js/hamburger.js"></script>
     </body>
 </html>
