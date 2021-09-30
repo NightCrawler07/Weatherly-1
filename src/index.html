@@ -22,7 +22,7 @@
         </div>
 
         <div class="overlayLister">
-            <img src="assets/x.png" onclick="offk()" id="cross" alt="" />
+            <!-- <img src="assets/x.png" onclick="offk()" id="cross" alt="" /> -->
             <div class="overlayLister2">
                 <ul id="text">
                     <li><h1>Home</h1></li>
@@ -202,11 +202,20 @@
         </script>
         <script>
             function onk() {
-                document.getElementsByClassName("overlayLister")[0].style.display = "block";
+                if (isonk) {
+                    document.getElementsByClassName("overlayLister")[0].style.display = "block";
+                    document.getElementById("hamburger").src = "assets/x.png";
+                } else {
+                    console.log("AAAAAAAAAAAAAAAAAAAAAAA");
+                    document.getElementsByClassName("overlayLister")[0].style.display = "none";
+                    document.getElementById("hamburger").src = "assets/hamburger.png"
+                }
+                isonk = !isonk;
             }
 
+            var isonk = true;
+
             function offk() {
-                document.getElementsByClassName("overlayLister")[0].style.display = "none";
             }
         </script>
     </body>
