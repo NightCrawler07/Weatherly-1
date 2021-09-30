@@ -68,7 +68,7 @@
 .overlay h1 {
     text-align: center;
     color: var(--background);
-    font-size: 7em;
+    font-size: 7rem;
     margin-top: 20%;
     font-family: "Helvetica";
     letter-spacing: 4px;
@@ -168,6 +168,10 @@
     .textinp {
         font-size: 1.2rem;
     }
+
+    .overlay h1 {
+        font-size: 5rem;
+    }
 }
 
 @media screen and (max-width: 345px) {
@@ -184,5 +188,9 @@
     }
     .submit {
         font-size: 0.75rem;
+    }
+
+    .overlay h1 {
+        font-size: 3rem;
     }
 }
