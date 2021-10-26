@@ -15,11 +15,11 @@
         <title>Weatherly</title>
     </head>
 
-    <body>
-        <!-- <img src="assets/background.png" class="background" alt=""> -->
+    <body onload="onstart()">
+        <!-- <img src="assets/background.png" class="background" alt="">
         <div class="overlay" id="ov">
-            <h1>Weatherly App</h1>
-        </div>
+            <h1>Weatherly App</h1> 
+        </div>-->
 
         <div class="overlayLister">
             <button class="hamburgerlogo head jugaad-button" onclick="onk()">asdf</button>
@@ -107,6 +107,7 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"
         ></script>
+        <script src="http://maps.google.com/maps/api/js?key=[OUR KEY HERE]"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var $winwidth = $(window).width();
@@ -147,6 +148,11 @@
             const searchbox = document.querySelector(".textinp");
             searchbox.addEventListener("keypress", setQuery);
             document.querySelector(".submit").addEventListener("onclick", setQuery);
+
+            function onstart() {
+                getResults("Delhi");
+            }
+
             function exe() {
                 getResults(searchbox.value);
             }
@@ -164,7 +170,6 @@
                     })
                     .then(displayResults);
             }
-
             function displayResults(weather) {
                 let city = document.querySelector(".location .city");
                 city.innerText = `${weather.name}, ${weather.sys.country}`;
@@ -182,6 +187,41 @@
                 let hilow = document.querySelector(".hi-low");
                 hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
             }
+
+            /*start of geolocation api*/
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    var x=navigator.geolocation.getCurrentPosition(showPosition);
+                    return x;
+                }
+            }
+
+            function showPosition(position) {
+                lat = position.coords.latitude;
+                lon = position.coords.longitude;
+                return displayCity(lat, lon);
+            }
+
+            function displayCity(latitude, longitude) {
+                var geocoder;
+                geocoder = new google.maps.Geocoder();
+                var latlng = new google.maps.LatLng(latitude, longitude);
+
+                geocoder.geocode({ latLng: latlng }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (results[0]) {
+                            var add = results[0].formatted_address;
+                            var value = add.split(",");
+                            city = value[count - 3];
+                            return city;
+                        }
+                    }
+                });
+            }
+
+            /*end of geolocation api*/
+
 
             function dateBuilder(d) {
                 let months = [
