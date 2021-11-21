@@ -107,7 +107,7 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"
         ></script>
-        <script src="https://maps.google.com/maps/api/js?key=cd3c097765ba92903ec783b6cf5bef86"></script>
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyBA8fXBQu4OJaluXM2xidnZVRHZ1jDRzXw"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var $winwidth = $(window).width();
@@ -150,7 +150,7 @@
             document.querySelector(".submit").addEventListener("onclick", setQuery);
 
             function onstart() {
-                getResults("Delhi");
+                getResults(getLocation());
             }
 
             function exe() {
@@ -193,7 +193,9 @@
             function getLocation() {
                 if (navigator.geolocation) {
                     var x=navigator.geolocation.getCurrentPosition(showPosition);
+                    console.log(x);
                     return x;
+
                 }
             }
 
