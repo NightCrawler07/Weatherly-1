@@ -1,0 +1,22 @@
+{
+  "name": "weatherly",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/b4bdf5ad-93dd-4409-a9ce-11779bcc5065/deploy-status)](https://app.netlify.com/sites/my-weatherly-app/deploys)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dc03/Weatherly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dc03/Weatherly/issues"
+  },
+  "homepage": "https://github.com/dc03/Weatherly#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
