@@ -27,6 +27,9 @@
             <div class="overlayLister2">
                 <ul id="text">
                     <li>
+                        <h1><a href="login.html">Login</a></h1>
+                    </li>
+                    <li>
                         <h1><a href="index.html">Home</a></h1>
                     </li>
                     <li>
@@ -150,16 +153,19 @@
             document.querySelector(".submit").addEventListener("onclick", setQuery);
 
             function onstart() {
-                getResults(getLocation());
+                console.log(searchbox.value)
+                getResults('Delhi');
             }
 
             function exe() {
+                console.log(searchbox.value)
                 getResults(searchbox.value);
             }
 
             function setQuery(evt) {
                 if (evt.keyCode == 13) {
                     getResults(searchbox.value);
+                    console.log(searchbox.value)
                 }
             }
 
