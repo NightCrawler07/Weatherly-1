@@ -112,12 +112,11 @@ app.post("/", function (req, res) {
 
     table.insertMany([new table({ uid: uid, pass: pass })], (err, user) => {
         if (err) {
-          console.log("[ERROR]");
-          console.log(err);
-        }
-        else {
-          console.log("[INFO] New user added");
-          console.log(user);
+            console.log("[ERROR]");
+            console.log(err);
+        } else {
+            console.log("[INFO] New user added");
+            console.log(user);
         }
     });
     res.send("<h1>data stored</h1>");
@@ -125,4 +124,15 @@ app.post("/", function (req, res) {
 
 app.listen(3000, function () {
     console.log("[INFO] Server running on port 3000");
+});
+
+app.get("/api/locationTemperature", (_req, res) => {
+    const api = {
+        key: "cd3c097765ba92903ec783b6cf5bef86",
+        base: "https://api.openweathermap.org/data/2.5/",
+    };
+
+    return fetch(`${api.base}weather?q=${_req.body.query}&units=metric&APPID=${api.key}`).then((weather) => {
+        return weather.json();
+    });
 });
