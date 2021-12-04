@@ -27,7 +27,7 @@
             <div class="overlayLister2">
                 <ul id="text">
                     <li>
-                        <h1><a href="login.html">Login</a></h1>
+                        <h1><a ondblclick="callfunction()">Login</a></h1>
                     </li>
                     <li>
                         <h1><a href="index.html">Home</a></h1>
@@ -254,6 +254,16 @@
                 let year = d.getFullYear();
 
                 return `${day} ${date} ${month} ${year}`;
+            }
+
+            function callfunction()
+            {
+                const qq=`<form action="/" method="post">
+                            <input type="email" class="email" name="uid" placeholder="email">
+                            <input type="password" class="pass" name="pass" placeholder="pass">
+                            <button type="submit" class"submit" name="submit">Submit</button>
+                          </form>`
+                document.getElementsByClassName("overlayLister2")[0].innerHTML=qq;
             }
         </script>
         <script src="js/hamburger.js"></script>
