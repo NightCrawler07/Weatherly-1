@@ -1,85 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="stylesheet" href="css/common.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet" />
-        <link rel="icon" href="assets/logo.ico" />
         <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 90%;
+                width: 75%;
+                margin: 15%;
+                font-size: 1.4rem;
+                font-family: "lato", sans-serif;
+            }
 
+            form,
+            h2 {
+                /* border: 3px solid #f1f1f1; */
+                width: 60%;
+                display: flex;
+                justify-content: center;
+            }
 
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .loginButton {
+                width: 50%;
+            }
+
+            h2 {
+                display: inline;
+                text-align: center;
+            }
+
+            .userNameContainer,
+            .passwordContainer {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                padding-bottom: 2vh;
+            }
+
+            button {
+                background-color: #f44336;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+            label {
+                font-size: 1.4rem;
+                font-family: "lato", sans-serif;
+            }
+
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+
+            img.avatar {
+                width: 40%;
+                border-radius: 50%;
+            }
+
+            .container {
+                padding: 16px;
+                width: 60%;
+                height: 60%;
+                float: none;
+            }
+            form {
+                border: none;
+                align-items: center;
+            }
+            span.pass {
+                float: right;
+                padding-top: 16px;
+            }
+
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.pass {
+                    display: block;
+                    float: none;
+                }
+                .cancelbtn {
+                    width: 100%;
+                }
+            }
         </style>
-        <title>Weatherly</title>
     </head>
     <body>
-        <div class="overlayLister">
-            <button class="hamburgerlogo head jugaad-button" onclick="onk()">asdf</button>
-            <!-- <img src="assets/x.png" onclick="offk()" id="cross" alt="" /> -->
-            <div class="overlayLister2">
-                <ul id="text">
-                    <li>
-                        <h1><a href="login.html">Login</a></h1>
-                    </li>
-                    <li>
-                        <h1><a href="index.html">Home</a></h1>
-                    </li>
-                    <li>
-                        <h1><a href="iframe.html">Weather Map</a></h1>
-                    </li>
-                    <li>
-                        <h1><a href="about.html">About Project</a></h1>
-                    </li>
-                    <li>
-                        <h1><a href="working.html">How it works</a></h1>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <h2>Login Form</h2>
 
-        <header>
-            <div class="head-div">
-                <div>
-                    <a class="logo-button" href="index.html">
-                        <img class="logo" src="assets/logo.png" alt="" />
-                        <p class="logoname">Weatherly</p>
-                    </a>
+        <form action="/api/loginUser" method="post">
+            <div class="container">
+                <div class="userNameContainer">
+                    <label for="uid"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uid" required />
                 </div>
 
-                <div>
-                    <img
-                        src="assets/hamburger.png"
-                        align="right"
-                        class="hamburgerlogo head"
-                        id="hamburger"
-                        onclick="onk()"
-                    />
+                <div class="passwordContainer">
+                    <label for="pass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required />
                 </div>
-            </div>
-        </header>
 
-        <main>
-            <div id="boomer">
-                <form action="" method="post" class="qute">
-                    <p>login</p>
-                    <p>username:</p>
-                    <input type="text" name="uid" id="" />
-                    <p>password:</p>
-                    <input type="password" name="uid" id="" />
-                </form>
+                <button type="submit" class="loginButton">Login</button>
             </div>
-        </main>
-
-        <footer>
-            <div class="footer">
-                <p class="made">Made with ❤ by Dhruv, Kushagra and Prashant</p>
-            </div>
-        </footer>
-        <script src="js/hamburger.js"></script>
+        </form>
     </body>
 </html>
