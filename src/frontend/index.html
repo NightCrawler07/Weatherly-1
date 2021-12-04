@@ -170,11 +170,12 @@
             }
 
             function getResults(query) {
-                fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-                    .then((weather) => {
-                        return weather.json();
-                    })
-                    .then(displayResults);
+                fetch(`/api/locationTemperature?query=${query}`)
+                // fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+                //     .then((weather) => {
+                //         return weather.json();
+                //     })
+                //     .then(displayResults);
             }
             function displayResults(weather) {
                 let city = document.querySelector(".location .city");
@@ -256,15 +257,15 @@
                 return `${day} ${date} ${month} ${year}`;
             }
 
-            function callfunction()
-            {
-                const qq=`<form action="/" method="post">
-                            <input type="email" class="email" name="uid" placeholder="email">
-                            <input type="password" class="pass" name="pass" placeholder="pass">
-                            <button type="submit" class"submit" name="submit">Submit</button>
-                          </form>`
-                document.getElementsByClassName("overlayLister2")[0].innerHTML=qq;
-            }
+            // function callfunction()
+            // {
+            //     const qq=`<form action="/" method="post">
+            //                 <input type="email" class="email" name="uid" placeholder="email">
+            //                 <input type="password" class="pass" name="pass" placeholder="pass">
+            //                 <button type="submit" class"submit" name="submit">Submit</button>
+            //               </form>`
+            //     document.getElementsByClassName("overlayLister2")[0].innerHTML=qq;
+            // }
         </script>
         <script src="js/hamburger.js"></script>
     </body>
